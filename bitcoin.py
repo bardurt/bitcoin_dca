@@ -54,6 +54,8 @@ def simulate_reverse(df, weekly_investment_usd):
     total_rows = len(df)
     results = []
 
+    # We use the most recent entry as the current price
+    # data is in descending date order
     valuation_price = df.iloc[0]['close']
     valuation_date = df.iloc[0]['timeClose']
 
